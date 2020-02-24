@@ -1,0 +1,30 @@
+.main{
+  margin-bottom: 30px;
+}
+.text-header{
+  text-align: center;
+}
+.ul{
+    background:#eee;
+    list-style:none;
+    width:100%;
+    padding:10px 0;
+    
+    text-align:center;
+}
+.li{
+    display:block;
+    padding:10px;
+    border:2px solid #1ABC9C;;
+    margin:10px;
+}
+ ul li a:hover{
+  text-decoration: none;
+}
+.well{
+  background-color: #30A5FF;
+}
+.all, .add-plan, .add-product, .save-edited-plan, .plan-details, .add-admin, .add-balance{
+  margin-left: 15px;
+}
+

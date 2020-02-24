@@ -1,0 +1,89 @@
+.main-body{
+	background: #F5F7F8;
+}
+
+.main-header{
+	background: #031E33;
+}
+
+/*header image backgroud color changes if needed*/
+.header-img img{
+	background: transparent;
+}
+
+/*signin link text color*/
+.button-sign p{
+	color: #fff
+}
+
+.header-right-content a{
+	color: #fff;
+}
+
+.reg-des p{
+	color: #777
+}
+.reg-des small{
+	color: #777
+}
+
+.form-h4{
+	color: #777;
+}
+
+/*button color*/
+.mat-form-button{
+	background: #5d96ea;
+	color: #fff
+}
+
+.mat-form-button1{
+	background: #53be8a;
+	color: white;
+}
+
+.mat-form-button2{
+	background: #5D96EA;
+	color: white;
+}
+
+/*reset password link text color*/
+.anc-style a{
+	color: #337ab7;
+}
+
+/*footer color*/
+.form-footer{
+	background: #3D4144;
+}
+
+/*footer social link icon color*/
+.social-links a{
+	color: #fff;
+	border: .5px solid #fff;
+}
+.social-links a:hover{
+    background: #696d70;
+}
+
+.footer_menu a{
+	color: white;
+}
+
+.footer_menu li:not(:last-child)::after{
+	color: #fff;
+}
+
+.form-footer p{
+	color: #7a899f;
+}
+
+/*dropdown language menu*/
+.menu-language{
+	background: #fff;
+}
+
+.menu-language a{
+	color:#333;
+}
+

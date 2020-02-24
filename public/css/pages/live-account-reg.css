@@ -1,0 +1,526 @@
+
+
+
+
+
+/*form styles*/
+/*label{
+        color: tomato;
+        width: 100%
+      }*/
+
+      /*#x>p{
+        text-align: left;
+        
+        margin:0;
+        color: aliceblue
+      }
+      #y>p{
+        text-align: left;
+        
+
+        margin:10px;
+        color: aliceblue;
+        margin-left: 0px
+      }*/
+      /*form styles*/
+     /* #myform {
+        width: 600px;
+        margin: 0px auto;
+        text-align: center;
+        position: relative;
+        
+      }*/
+      #myform fieldset {
+        background: #fff;
+        border: 0 none;
+        border-radius: 3px;
+        box-shadow: 0 0 7px 0 #777;
+        padding: 20px 30px 20px 30px;
+        box-sizing: border-box;
+        width: 90%;
+        /*height: 590px;*/
+        margin: 40px auto;
+        
+        /*stacking fieldsets above each other*/
+        position: relative;
+      }
+      /*Hide all except first fieldset*/
+      #myform fieldset:not(:first-of-type) {
+        display: none;
+      }
+      /*inputs*/
+     /* #myform input, #myform textarea {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: aliceblue;
+        font-size: 13px;
+        background-color: rgba(170, 177, 185,0.5);
+      }
+      .form-control{
+        background-color: rgba(170, 177, 185,0.5);
+        padding: 0px;
+        color:#ddd;
+      }*/
+      /*buttons*/
+      #myform .action-button {
+        width: 100px;
+        background: #00bf86;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 5% auto auto 5%;
+        display: inline-flex;
+        font-size: 13px;
+        justify-content: center;
+      }
+      #myform p{
+        color: #777;
+        text-align: left;
+        margin-bottom: 0;
+      }
+      #myform .action-button:hover, #myform .action-button:focus {
+        color: #ffffff;
+        background-color: #008c62;
+        border-color: #00825b;
+      }
+      /*headings*/
+      .fs-title {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #777;
+        margin-bottom: 10px;
+        font-weight:300;
+        text-align: center;
+      }
+      hr{
+        background: white;
+      }
+      .fs-subtitle {
+        font-weight: normal;
+        font-size: 13px;
+        color: #666;
+        margin: 20px;
+      }
+      /*progressbar*/
+      #progressbar {
+        margin: 40px auto auto -50px;
+        overflow: hidden;
+        /*CSS counters to number the steps*/
+        counter-reset: step;
+        /*display: inline-flex;
+        width: 100%*/
+      }
+      #progressbar li {
+        list-style-type: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 25%;
+        float: left;
+        position: relative;
+        text-align: center;
+      }
+      #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 10px;
+        color: #333;
+        background: white;
+        border-radius: 3px;
+        margin: 0 auto 5px auto;
+        height: 20px;
+      }
+      /*progressbar connectors*/
+      #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -50%;
+        top: 9px;
+        z-index: -1; /*put it behind the numbers*/
+      }
+      #progressbar li:first-child:after {
+        /*connector not needed before the first step*/
+        content: none; 
+      }
+      /*marking active/completed steps green*/
+      /*The number of the step and the connector before it = green*/
+      #progressbar li.active:before,  #progressbar li.active:after{
+        background: #00bf86;
+        color: white;
+      }
+
+
+
+      /*form*/
+/*form {
+	max-width: 500px;
+	margin: 4em auto;
+	padding: 4em 5em 4em 5em;
+	background: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: 0 0 20px #ddd;
+}*/
+
+/*.form-div-height{
+	height: 100vh
+}*/
+
+
+.wrap {
+  position: relative;
+  margin: 30px auto 20px auto;
+}
+
+/* select starting stylings ------------------------------*/
+.select {
+  text-align: left;
+	position: relative;
+	width: 100%;
+}
+
+.select-text {
+	position: relative;
+	/*font-family: inherit;*/
+	background-color: transparent;
+	width: 100%;
+	padding: 10px 10px 10px 0;
+	font-size: 14px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0, 0.12);
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none;
+	-moz-appearance: none;
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+	pointer-events: none;
+	/*display: none*/
+
+}
+
+
+/* LABEL ======================================= */
+small{
+  position: absolute;
+  font-size: 12px;
+  top: -15px;
+  color: #00BF86;
+  text-align: left;
+  margin-left: 4px
+}
+.select-label {
+	color: #000;
+	font-size: 14px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 10px;
+	transition: 0.2s ease all;
+}
+
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: #2F80ED;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 12px;
+}
+
+/* BOTTOM BARS ================================= */
+.select-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.select-bar:before, .select-bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #34C29E;
+	transition: 0.2s ease all;
+}
+
+.select-bar:before {
+	left: 50%;
+}
+
+.select-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+	width: 50%;
+}
+
+
+
+/* HIGHLIGHTER ================================== */
+.select-highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.side-des{
+	margin: 35% auto auto auto;
+}
+
+.side-des h2{
+	font-size: 23px;
+	font-weight: 300;
+	text-align: center;
+  color: #777
+}
+
+.side-des h3{
+	font-size: 17px;
+	text-align: center;
+	font-weight: 300;
+	color: #7a899f
+}
+.side-des ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  color: #777
+}
+
+/*.side-des ul li::before {
+    font-family: "Font Awesome 5 Brands";
+    content: '/f095';
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+    margin-bottom: -3px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 15px;
+    font-size: 12px
+}*/
+.form-icon{
+  margin-right: 10px
+}
+.form-icon i{
+  text-align: center;
+  width: 22px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #7094E6;
+  height: 22px;
+  margin-top: 0px;
+  padding: 4px;
+  font-size: 12px;
+}
+.side-des ul li {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.small-device-style{
+  margin-top: 0px
+}
+
+
+@media (max-width: 768px){
+	/*.form-div-height{
+		height: 100vh
+	}*/
+  .small-device-style{
+    margin-top: 20%
+  }
+	.form-footer{
+		padding:4em 0 0 0;
+		text-align: justify;
+	}
+	/*#myform fieldset{
+		width: 100%
+	}*/
+  /*.main-body{
+    height: 240vh;
+  }*/
+  .side-des{
+    margin: 5% auto auto auto;
+  }
+  .header-right-content{
+    font-size: 9px;
+    display: block;
+    margin-top:-15%;
+  }
+  .footer_menu li:not(:last-child)::after{
+    padding: 0 10px
+  }
+}
+
+.select label{
+  position: relative;
+  color: tomato;
+  font-size: 12px
+}
+.form-group label{
+  position: absolute;
+  color: tomato;
+  font-size: 12px
+}
+.form-group{
+  text-align: left;
+}
+
+.form-group .control-label {
+  position: absolute;
+  top: 3.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.1rem solid #ddd;
+  display: block;
+}
+.form-group .bar::before {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: #5FC28E;
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+.form-group input,
+.form-group textarea {
+  display: block;
+  background: none;
+  padding: 2.125rem 0.125rem 0.0625rem;
+  font-size: 1.5rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.form-group input[type="file"] {
+  line-height: 1;
+}
+.form-group input[type="file"] ~ .bar {
+  display: none;
+}
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #333;
+}
+.form-group select ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group input:valid ~ .control-label,
+.form-group input.form-file ~ .control-label,
+.form-group input.has-value ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.form-group textarea:valid ~ .control-label,
+.form-group textarea.form-file ~ .control-label,
+.form-group textarea.has-value ~ .control-label {
+  font-size: 12px;
+  color: #00BF86;
+  top: 5px;
+  left: 1.5rem;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+.form-group select:focus ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label {
+  color: #00BF86;
+}
+.form-group select:focus ~ .bar::before,
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+#agree{
+  left: -144px;
+  margin:7px 0 0 !important;
+  position: relative;
+}
+.small-label{
+  top: 5px !important;
+  padding-left: 25px !important;
+}
+
+@media (max-width: 768px) {
+  #agree{
+    left: -90px;
+  }
+  .small-label{
+    font-size: 9px !important;
+  }
+}
